@@ -1,0 +1,9 @@
+.gradient-content{
+    width: 485px;
+    height: 128px;
+    background-image: linear-gradient(to right, #3752FD,  #9BA8F8);
+}
+.sizee{
+    width: 196px;
+    max-height: 100% ;
+}

@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    
+<body class="">
+    <section class="mr-20 ml-20 mt-10 bg-slate-100 p-4 rounded-xl">
+        <nav class="flex justify-between ">
+            <div class="flex">
+            <img src="assets/logo.png" alt="">
+            <h1 class="text-3xl font-bold mt-3 ml-2"> <span class="font-thin">Dev</span>Board</h1>
+            </div>
+            <div class="flex mr-12 gap-5 ">
+                <div class="flex pr-2 pl-2 pt-2 bg-white rounded-full gap-3  ">
+            <img class="h-5 flex pt-1" src="assets/checkbox.png" alt="">
+            <h2 class="text-3xl font-bold">23</h2>
+        </div>
+        <div class=" bg-white rounded-full cursor-pointer pl-4 pr-4 pt-1 pb-3">
+            <img class="h-8 w-8 mt-2" src="assets/theme-btn.png" alt="">
+            </div>
+            </div>
+        </nav>
+    </section>
+    <main class="">
+        <div class="flex flex-row  ml-20">
+        <div  class="mr-10 mt-10 flex gap-6">
+            <div class="w-64 flex gap-7 bg-slate-100 rounded-xl p-4">
+                <div class=" bg-white rounded-full pl-4 pr-4 pt-4 pb-4 h-16 w-16">
+                <img class="w-5 " src="assets/checkbox.png" alt="">
+                </div>
+                <div>
+                <h3>Task Assigned</h3>
+                <h2 class="font-bold">05</h2>
+            </div>
+            </div>
+            <div class="gradient-content flex  rounded-xl gap-6">
+                <div class="flex flex-row pl-4 pt-5">
+                <img class="w-14 h-16" src="assets/board.png" alt="">
+                </div>
+                <div class="pt-7">
+                <h3 class="text-white font-semibold text-xl">Discover Something</h3>
+                <h2 class="text-white font-semibold text-xl">New Today!</h2>
+            </div>
+            </div>
+            <div class="w-64 flex gap-7 bg-slate-100 rounded-xl p-4">
+                <div class=" bg-white rounded-full pl-4 pr-4 pt-4 pb-4 h-16 w-16">
+                <img class="w-5 " src="assets/calender.png" alt="">
+                </div>
+                <div>
+                <h3 class="font-semibold text-xl p-3" id="currentDate"></h3>
+                
+            </div>
+            </div>
+        </div>
+        <div  class="mt-10 bg-slate-100 p-4 rounded-xl sizee">
+            <div class="flex justify-center gap-2">
+            <img src="assets/activity.png" alt="">
+            <h3>Activity Log</h3>
+        </div>
+        <div class="pl-8 pt-5">
+            <button class="btn-primary bg-blue-600 p-2 rounded-3xl ">Clear History</button>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script>
+        const today = new Date();
+        const options = {month : "short", day : "numeric" , year :"numeric"}
+        const formattedDate = today.toLocaleDateString("en-US" , options) ;
+
+        document.getElementById('currentDate').textContent = formattedDate ;
+    </script>
 </body>
 </html>
