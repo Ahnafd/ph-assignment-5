@@ -1,9 +1,19 @@
 .gradient-content{
     width: 485px;
-    height: 128px;
+    height: 127px;
     background-image: linear-gradient(to right, #3752FD,  #9BA8F8);
 }
-.sizee{
+.history{
     width: 196px;
-    max-height: 100% ;
+}
+
+.card-1{
+    width: fit-content;
+}
+.card-parent{
+    display: grid ;
+    grid-template-columns: repeat( 3 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    gap: 2px;
+    margin-right:  175px;
 }

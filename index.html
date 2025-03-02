@@ -10,7 +10,7 @@
 
 </head>
 <body class="">
-    <section class="mr-20 ml-20 mt-10 bg-slate-100 p-4 rounded-xl">
+    <section class="mr-20 ml-20 bg-slate-100 p-4 rounded-xl">
         <nav class="flex justify-between ">
             <div class="flex">
             <img src="assets/logo.png" alt="">
@@ -19,16 +19,16 @@
             <div class="flex mr-12 gap-5 ">
                 <div class="flex pr-2 pl-2 pt-2 bg-white rounded-full gap-3  ">
             <img class="h-5 flex pt-1" src="assets/checkbox.png" alt="">
-            <h2 class="text-3xl font-bold">23</h2>
+            <h2 class="text-3xl font-bold total-task">23</h2>
         </div>
-        <div class=" bg-white rounded-full cursor-pointer pl-4 pr-4 pt-1 pb-3">
-            <img class="h-8 w-8 mt-2" src="assets/theme-btn.png" alt="">
+        <div class=" bg-white rounded-full cursor-pointer pl-4 pr-4 pt-1 pb-3 change-clr-btn">
+            <img class="h-8 w-8 mt-2 " id="change-clr-btn" src="assets/theme-btn.png" alt="">
             </div>
             </div>
         </nav>
     </section>
     <main class="">
-        <div class="flex flex-row  ml-20">
+        <div class="flex flex-row  ml-20 items-start">
         <div  class="mr-10 mt-10 flex gap-6">
             <div class="w-64 flex gap-7 bg-slate-100 rounded-xl p-4">
                 <div class=" bg-white rounded-full pl-4 pr-4 pt-4 pb-4 h-16 w-16">
@@ -36,7 +36,7 @@
                 </div>
                 <div>
                 <h3>Task Assigned</h3>
-                <h2 class="font-bold">05</h2>
+                <h2 class="font-bold task-assigned-count">6</h2>
             </div>
             </div>
             <div class="gradient-content flex  rounded-xl gap-6">
@@ -58,23 +58,127 @@
             </div>
             </div>
         </div>
-        <div  class="mt-10 bg-slate-100 p-4 rounded-xl sizee">
+        <div  class="history mt-10 bg-slate-100 p-4 rounded-xl self-start">
             <div class="flex justify-center gap-2">
             <img src="assets/activity.png" alt="">
             <h3>Activity Log</h3>
         </div>
-        <div class="pl-8 pt-5">
-            <button class="btn-primary bg-blue-600 p-2 rounded-3xl ">Clear History</button>
+        <div class="pl-8 pt-5 mb-4">
+            <button class="btn-primary bg-blue-600 btn-history p-2 rounded-3xl ">Clear History</button>
+            
             </div>
+            <h3 class="result"></h3>
+            <h3 class="result"></h3>
+            <h3 class="result"></h3>
+            <h3 class="result"></h3>
+            <h3 class="result"></h3>
+            <h3 class="result"></h3>
         </div>
         </div>
     </main>
-    <script>
-        const today = new Date();
-        const options = {month : "short", day : "numeric" , year :"numeric"}
-        const formattedDate = today.toLocaleDateString("en-US" , options) ;
+    <section>
+        <div class="card-parent grid grid-cols-3 gap-6 ml-20 ">
+        <div class="mt-11 bg-slate-100 card-1 p-6 rounded-md">
+        <h4 class="bg-white card-1 p-2 rounded-md">ShopEase</h4>
+        <h2 class=" pt-6  pb-6 text-xl font-semibold task-1">Fix Mobile Button Issue</h2>
+        <p class=" bg-white p-3 rounded-md">Debug using Chrome <br>
+            <span> DevTools, check for overlapp...</span></p>
+        <div class="flex">
+            <div class=" pt-3">
+                <p>Deadline</p>
+                <h4 class="font-bold">21 March 2025</h4>
+            </div>
+            <div class="pl-8 pt-5">
+                <button class="btn-1 btn-primary bg-blue-600 p-2 rounded-md ">Completed</button>
+                </div>
+        </div>
+    </div>
+        <div class="mt-11 bg-slate-100 card-1 p-6 rounded-md">
+        <h4 class="bg-white card-1 p-2 rounded-md">CloudSync</h4>
+        <h2 class=" pt-6  pb-6 text-xl font-semibold task-2">Add Dark Mode</h2>
+        <p class=" bg-white p-3 rounded-md">Debug using Chrome <br>
+            <span> DevTools, check for overlapp...</span></p>
+        <div class="flex">
+            <div class=" pt-3">
+                <p>Deadline</p>
+                <h4 class="font-bold">21 March 2025</h4>
+            </div>
+            <div class="pl-8 pt-5">
+                <button class="btn-2 btn-primary bg-blue-600 p-2 rounded-md ">Completed</button>
+                </div>
+        </div>
+    </div>
+        <div class="mt-11 bg-slate-100 card-1 p-6 rounded-md">
+        <h4 class="bg-white card-1 p-2 rounded-md">SwiftPay</h4>
+        <h2 class=" pt-6  pb-6 text-xl font-semibold task-3">Optimize  Home page</h2>
+        <p class=" bg-white p-3 rounded-md">Debug using Chrome <br>
+            <span> DevTools, check for overlapp...</span></p>
+        <div class="flex">
+            <div class=" pt-3">
+                <p>Deadline</p>
+                <h4 class="font-bold">21 March 2025</h4>
+            </div>
 
-        document.getElementById('currentDate').textContent = formattedDate ;
+            <div class="pl-8 pt-5">
+                <button class="btn-3 btn-primary bg-blue-600 p-2 rounded-md ">Completed</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-11 bg-slate-100 card-1 p-6 rounded-md">
+        <h4 class="bg-white card-1 p-2 rounded-md">Meta</h4>
+        <h2 class=" pt-6  pb-6 text-xl font-semibold task-4">Add new emoji 🤲</h2>
+        <p class=" bg-white p-3 rounded-md">Debug using Chrome <br>
+            <span> DevTools, check for overlapp...</span></p>
+        <div class="flex">
+            <div class=" pt-3">
+                <p>Deadline</p>
+                <h4 class="font-bold">21 March 2025</h4>
+            </div>
+            <div class="pl-8 pt-5">
+                <button class="btn-4 btn-primary bg-blue-600 p-2 rounded-md ">Completed</button>
+                </div>
+            </div>
+        </div>
+        <div class=" mt-11 bg-slate-100 card-1 p-6 rounded-md">
+        <h4 class="bg-white card-1 p-2 rounded-md">Google LLC</h4>
+        <h2 class=" pt-6  pb-6 text-xl font-semibold task-5">Integrate OpenAI API </h2>
+        <p class=" bg-white p-3 rounded-md">Debug using Chrome <br>
+            <span> DevTools, check for overlapp...</span></p>
+        <div class="flex">
+            <div class=" pt-3">
+                <p>Deadline</p>
+                <h4 class="font-bold">21 March 2025</h4>
+            </div>
+            <div class="pl-8 pt-5">
+                <button class="btn-5 btn-primary bg-blue-600 p-2 rounded-md ">Completed</button>
+                </div>
+            </div>
+        </div>
+        <div class=" mt-11 bg-slate-100 card-1 p-6 rounded-md">
+        <h4 class="bg-white card-1 p-2 rounded-md">Glassdoar</h4>
+        <h2 class=" pt-6  pb-6 text-xl font-semibold task-6">Improve Job searching </h2>
+        <p class=" bg-white p-3 rounded-md">Debug using Chrome <br>
+            <span> DevTools, check for overlapp...</span></p>
+        <div class="flex">
+            <div class=" pt-3">
+                <p>Deadline</p>
+                <h4 class="font-bold">21 March 2025</h4>
+            </div>
+            <div class="pl-8 pt-5">
+                <button class="btn-6 btn-primary bg-blue-600 p-2 rounded-md ">Completed</button>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+    </section>
+    <script>
+
     </script>
+    <script src="script.js"></script>
+    <script src="bg-color.js"></script>
+    <script src="activity.js"></script>
 </body>
 </html>
